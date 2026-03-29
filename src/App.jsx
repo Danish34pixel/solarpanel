@@ -9,11 +9,14 @@ import About from './components/About'
 import Footer from './components/Footer'
 
 import { LanguageProvider } from './components/LanguageContext'
+import { ThemeProvider, useTheme } from './components/ThemeContext'
 
-function App() {
+const AppContent = () => {
+  const { theme } = useTheme();
+  
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-slate-950 text-white selection:bg-amber-500/30 overflow-x-hidden">
+      <div className={`min-h-screen ${theme} dark:bg-slate-950 bg-slate-50 dark:text-white text-black selection:bg-amber-500/30 overflow-x-hidden transition-colors duration-500`}>
         <Navbar />
         
         <main className="pt-24 px-6 md:px-12 max-w-[1400px] mx-auto space-y-24 pb-20">
@@ -27,6 +30,14 @@ function App() {
         <Footer />
       </div>
     </LanguageProvider>
+  );
+};
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   )
 }
 

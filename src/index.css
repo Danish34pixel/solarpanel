@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-amber-500: #f59e0b;
+  --color-slate-50: #f8fafc;
+  --color-slate-950: #020617;
+}
+
+@layer base {
+  html {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  html.dark {
+    color-scheme: dark;
+  }
+  
+  html.light {
+    color-scheme: light;
+  }
+}

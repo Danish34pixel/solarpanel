@@ -6,11 +6,11 @@ const Hero = () => {
 
   return (
     <section id="hero" className="flex flex-col items-center text-center gap-8 py-20 relative">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/10 blur-[120px] rounded-full -z-10"></div>
-      <h1 className="text-6xl md:text-9xl font-black tracking-tighter bg-gradient-to-b from-white to-white/30 bg-clip-text text-transparent">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 dark:bg-amber-500/10 bg-amber-500/5 blur-[120px] rounded-full -z-10"></div>
+      <h1 className="text-6xl md:text-9xl font-black tracking-tighter dark:bg-gradient-to-b dark:from-white dark:to-white/30 bg-gradient-to-b from-slate-900 to-slate-500 bg-clip-text text-transparent">
         {t.hero.title} <br /> {t.hero.subtitle}
       </h1>
-      <p className="text-xl md:text-3xl text-slate-400 max-w-3xl leading-relaxed font-light">
+      <p className="text-xl md:text-3xl dark:text-slate-400 text-slate-600 max-w-3xl leading-relaxed font-light">
         {t.hero.desc}
       </p>
       <div className="flex flex-col sm:flex-row gap-6 mt-8">
